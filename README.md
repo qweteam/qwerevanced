@@ -1,57 +1,44 @@
-# ReVanced Magisk Module
+# ReVanced Magisk Modülü
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/qweteamrevanced)
 [![Build Modules](https://github.com/qweteam/qwerevanced/actions/workflows/build.yml/badge.svg?event=release)](https://github.com/qweteam/qwerevanced/actions/workflows/build.yml)
 [![CI](https://github.com/j-hc/revanced-magisk-module/actions/workflows/ci.yml/badge.svg?event=schedule)](https://github.com/j-hc/revanced-magisk-module/actions/workflows/ci.yml)
 
-Extensive ReVanced builder  
+> **Orijinal Proje Sahibi:** Bu repo, [j-hc/revanced-magisk-module](https://github.com/j-hc/revanced-magisk-module) projesinin altyapısı kullanılarak oluşturulmuştur. Emekleri için orijinal geliştiriciye teşekkürler.
 
-Get the [latest CI release](https://github.com/j-hc/revanced-magisk-module/releases).
+Kapsamlı ReVanced Derleyicisi  
 
-Use [**zygisk-detach**](https://github.com/j-hc/zygisk-detach) to detach YouTube and YT Music from Play Store if you are using magisk modules. 
+En son [CI sürümünü indirin](https://github.com/j-hc/revanced-magisk-module/releases).
 
-<details><summary><big>Features</big></summary>
+Eğer Magisk modülleri kullanıyorsanız, YouTube'u ve YT Music'i Play Store güncellemelerinden ayırmak için [**zygisk-detach**](https://github.com/zygisk-detach/zygisk-detach) kullanın.
+
+<details><summary><big>Özellikler</big></summary>
 <ul>
- <li> Supports all present and future ReVanced apps (including projects implementing the same API)</li>
- <li> Can build Magisk modules and non-root APKs</li>
- <li> Updated daily with the latest versions of apps and patches</li>
- <li> Optimizes APKs and modules for size</li>
- <li> Modules</li>
+ <li> Mevcut ve gelecekteki tüm ReVanced uygulamalarını destekler (aynı API'yi uygulayan projeler dahil)</li>
+ <li> Magisk modülleri ve root gerektirmeyen (non-root) APK'lar oluşturabilir</li>
+ <li> En son uygulama ve yama sürümleriyle günlük olarak güncellenir</li>
+ <li> APK'ları ve modülleri boyut açısından optimize eder</li>
+ <li> Modüller;</li>
     <ul>
-     <li> recompile invalidated odex for faster usage</li>
-     <li> receive updates from Magisk app</li>
-     <li> do not break safetynet or trigger root detections</li>
-     <li> handle installation of the correct version of the stock app and all that</li>
-     <li> support Magisk and KernelSU</li>
+     <li> Daha hızlı kullanım için geçersiz kılınan odex dosyalarını yeniden derler</li>
+     <li> Magisk uygulamasından güncelleme alabilir</li>
+     <li> SafetyNet'i bozmaz veya root tespitini tetiklemez</li>
+     <li> Orijinal uygulamanın doğru sürümünün kurulumunu ve her şeyi yönetir</li>
+     <li> Magisk ve KernelSU'yu destekler</li>
     </ul>
 </ul>
 </details>
 
-## To include/exclude patches or patch other apps
+## Modüllerin klasik bağlama (mount) yöntemiyle ilgili sorun yaşıyorsanız
+Örneğin;
+- Yeniden başlatmalardan sonra **"Yeniden flaşlama gerekiyor"** hatası
+- Root tespiti yapan uygulamalardan gelen **"Şüpheli bağlama tespit edildi"** uyarıları
 
- * Star the repo :eyes:
- * Use the repo as a [template](https://github.com/new?template_name=revanced-magisk-module&template_owner=j-hc)
- * Customize [`config.toml`](./config.toml) using [rvmm-config-gen](https://j-hc.github.io/rvmm-config-gen/)
- * Run the build [workflow](../../actions/workflows/build.yml)
- * Grab your modules and APKs from [releases](../../releases)
+[rvmm-zygisk-mount](https://github.com/j-hc/rvmm-zygisk-mount) kullanmayı değerlendirebilirsiniz.
 
-also see here [`CONFIG.md`](./CONFIG.md)
-
-## If you are having trouble with the classic mount method of the modules
-such as,
-- **"Reflash needed"** error after reboots
-- **"Suspicious mount detected"** warnings from root detector apps
-
-You can consider using [rvmm-zygisk-mount](https://github.com/j-hc/rvmm-zygisk-mount)
-
-## Building Locally
-### On Termux
+## Yerel Olarak Derleme
+### Termux Üzerinde
 ```console
-bash <(curl -sSf https://raw.githubusercontent.com/j-hc/revanced-magisk-module/main/build-termux.sh)
-```
-
-### On Linux
-```console
-$ git clone https://github.com/j-hc/revanced-magisk-module --depth 1
-$ cd revanced-magisk-module
-$ ./build.sh
-```
+bash <(curl -sSf [https://raw.githubusercontent.com/j-hc/revanced-magisk-module/main/build-termux.sh](https://raw.githubusercontent.com/j-hc/revanced-magisk-module/main/build-termux.sh))
+# ReVanced Magisk Modülü
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/qweteamrevanced)
+[![Build Modules](https://github.com/qweteam/qwerevanced/actions/workflows/build.yml/badge.svg?event=release)](https://github.com/qweteam/qwerevanced/actions/workflows/build.yml)
