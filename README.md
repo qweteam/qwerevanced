@@ -1,5 +1,6 @@
 # ReVanced Magisk Module
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/qweteamrevanced)
+[![Uygulamaların Yamalanması](https://github.com/qweteam/qwerevanced/actions/workflows/build.yml/badge.svg?event=release)](https://github.com/qweteam/qwerevanced/actions/workflows/build.yml)
 [![CI](https://github.com/j-hc/revanced-magisk-module/actions/workflows/ci.yml/badge.svg?event=schedule)](https://github.com/j-hc/revanced-magisk-module/actions/workflows/ci.yml)
 
 Extensive ReVanced builder  
