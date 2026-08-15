@@ -3,8 +3,8 @@
 [![Build Modules](https://github.com/qweteam/qwerevanced/actions/workflows/build.yml/badge.svg?event=release)](https://github.com/qweteam/qwerevanced/actions/workflows/build.yml)
 [![CI](https://github.com/j-hc/revanced-magisk-module/actions/workflows/ci.yml/badge.svg?event=schedule)](https://github.com/j-hc/revanced-magisk-module/actions/workflows/ci.yml)
 
-[!WARNING]
-**Orijinal Proje Sahibi:** Bu repo, [j-hc/revanced-magisk-module](https://>github.com/j-hc/revanced-magisk-module) projesinin altyapısı kullanılarak oluşturulmuştur. Emekleri için orijinal geliştiriciye teşekkürler.
+> [!WARNING]
+> **Orijinal Proje Sahibi:** Bu repo, [j-hc/revanced-magisk-module](https://>github.com/j-hc/revanced-magisk-module) projesinin altyapısı kullanılarak oluşturulmuştur. Emekleri için orijinal geliştiriciye teşekkürler.
 
 Kapsamlı ReVanced Derleyicisi  
 
