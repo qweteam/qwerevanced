@@ -40,6 +40,3 @@ Eğer Magisk modülleri kullanıyorsanız, YouTube'u ve YT Music'i Play Store g�
 ### Termux Üzerinde
 ```console
 bash <(curl -sSf [https://raw.githubusercontent.com/j-hc/revanced-magisk-module/main/build-termux.sh](https://raw.githubusercontent.com/j-hc/revanced-magisk-module/main/build-termux.sh))
-# ReVanced Magisk Modülü
-[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/qweteamrevanced)
-[![Build Modules](https://github.com/qweteam/qwerevanced/actions/workflows/build.yml/badge.svg?event=release)](https://github.com/qweteam/qwerevanced/actions/workflows/build.yml)
