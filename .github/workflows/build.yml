@@ -1,4 +1,4 @@
-name: Build Modules
+Name: Build Modules
 on:
   workflow_call:
     inputs:
@@ -54,16 +54,6 @@ jobs:
       - name: Get output
         id: get_output
         run: |
-          # build.md olustuktan hemen sonra Turkceye ceviriyoruz
-          if [ -f build.md ]; then
-            sed -i 's/Install/Şunun için MicroG yükleyin:/g' build.md
-            sed -i 's/for non-root YouTube and YT Music APKs/Kök (root) olmayan YouTube ve YT Music APK\'ları/g' build.md
-            sed -i 's/Use/Şunu kullanın:/g' build.md
-            sed -i 's/to detach YouTube and YT Music modules from Play Store/YouTube ve YT Music modüllerini Play Store\'dan ayırmak için/g' build.md
-            sed -i 's/Patches:/Yamalar:/g' build.md
-            sed -i 's/Changelog/Değişiklik Günlüğü/g' build.md
-          fi
-
           DELIM="$(openssl rand -hex 8)"
           echo "BUILD_LOG<<${DELIM}" >> "$GITHUB_OUTPUT"
           cat build.md >> "$GITHUB_OUTPUT"
@@ -148,20 +138,19 @@ jobs:
           MODULES=${MODULES#"$NL"}
           APKS=${APKS#"$NL"}
 
-          BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; `/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
+          BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
           MSG="*Yeni derleme!*
 
           ${BODY}
 
-          *▼ İndirme Linkleri:*
+          *▼ Indirme Linkleri:*
           Modüller:
           ${MODULES}
 
-          APK'lar:
+          APKlar:
           ${APKS}
           "
           echo "'$MSG'"
           MSG=${MSG:0:9450}
           POST="https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
           curl -X POST --data-urlencode "parse_mode=Markdown" --data-urlencode "disable_web_page_preview=true" --data-urlencode "text=${MSG}" --data-urlencode "chat_id=${TG_CHAT}" "$POST"
-          
